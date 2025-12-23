@@ -1,0 +1,7 @@
+// 全局 SCSS 文件 - 用于在 Vite 中全局注入
+// 这样所有组件都可以直接使用变量、mixins 和函数，无需导入
+
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./functions.scss";
+

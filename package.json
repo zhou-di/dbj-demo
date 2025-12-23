@@ -1,0 +1,27 @@
+{
+  "name": "vue3-pinia-router-elementplus-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vue3全家桶项目：Vue3 + Pinia + Vue Router + Element Plus",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.6.3",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "classpal-js-sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.71.1",
+    "typescript": "^5.4.3",
+    "vite": "^5.1.6",
+    "vue-tsc": "^2.0.6"
+  }
+}
