@@ -1,72 +1,8 @@
-# 项目优化参考
-
-## .npmrc
-
-查看项目中 .npmrc 文件
-
-## token多环境隔离
-
-```js
-// 1. 避免 Domain 陷阱: 如果你尝试通过设置 domain 来解决，比如在 Dev 环境强行设置 domain 为 dev.admin.banxueketang.com，这可以防止 Dev 的 Token 跑到 Prod。但是，很难防止 Prod 的 Token (admin.banxueketang.com) 跑进 Dev（因为它是父级）。
-
-// 2. 物理隔离
-function getTokenKey() {
-  return `Admin-Token-${extractEnvPrefix()}`
-}
-
-export function getToken() {
-  return Cookies.get(getTokenKey())
-}
-
-export function setToken(token) {
-  return Cookies.set(getTokenKey(), token)
-}
-
-// 获取url中的环境前缀
-function extractEnvPrefix() {
-  const hostname = window.location.hostname;
-  const regex = /^(?:([a-zA-Z0-9-]+)\.)?admin\.banxueketang\.com$/;
-  const match = hostname.match(regex);
-  if (hostname === 'localhost') {
-    return 'local';
-  }
-  if (match) {
-    // match[1] 是环境前缀，如果为 undefined 则表示无前缀（生产环境）
-    return match[1] || 'prod';
-  }
-  return 'unknown';
-}
-```
-
-## 可扩展的自定义指令
-
-1. 防抖
-
-```js
- // 延迟执行
- <el-button
-   type="success"
-   :icon="Plus"
-   v-debounce:1000="() => {}"
-   circle
- />
-
- // 立即执行
- <el-button
-   type="warning"
-   :icon="Plus"
-   v-debounce:1000.immediate="() => {}"
-   circle
- />
-```
-
----
-
-## Vue3
+# Vue3
 
 这是一个使用 Vue3 + Pinia + Vue Router + Element Plus + TypeScript 构建的完整示例项目。
 
-### 技术栈
+## 技术栈
 
 - **Vue 3.4.21** - 渐进式 JavaScript 框架
 - **TypeScript 5.4.3** - JavaScript 的超集，提供类型支持
@@ -75,7 +11,7 @@ function extractEnvPrefix() {
 - **Element Plus 2.6.3** - 基于 Vue 3 的组件库
 - **Vite 5.1.6** - 下一代前端构建工具
 
-### 项目结构
+## 项目结构
 
 ```
 .
@@ -101,7 +37,7 @@ function extractEnvPrefix() {
 └── package.json        # 项目依赖
 ```
 
-### 安装依赖
+## 安装依赖
 
 ```bash
 npm install
@@ -111,7 +47,7 @@ pnpm install
 yarn install
 ```
 
-### 开发运行
+## 开发运行
 
 ```bash
 npm run dev
@@ -121,7 +57,7 @@ pnpm dev
 yarn dev
 ```
 
-### 构建生产版本
+## 构建生产版本
 
 ```bash
 npm run build
@@ -131,7 +67,7 @@ pnpm build
 yarn build
 ```
 
-### 预览生产构建
+## 预览生产构建
 
 ```bash
 npm run preview
@@ -141,7 +77,7 @@ pnpm preview
 yarn preview
 ```
 
-### 功能特性
+## 功能特性
 
 - ✅ Vue 3 Composition API
 - ✅ TypeScript 全类型支持
@@ -151,7 +87,7 @@ yarn preview
 - ✅ Vite 快速开发体验
 - ✅ 全局类型定义文件
 
-### 示例页面
+## 示例页面
 
 1. **首页** (`/`) - 展示项目技术栈介绍
 2. **关于** (`/about`) - 项目信息和技术栈详情
