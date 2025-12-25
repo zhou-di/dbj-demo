@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // Vue 3 官方语言支持扩展
+    "Vue.volar",
+    // Vue 3 官方 TypeScript 支持扩展（可选，但推荐）
+    "Vue.vscode-typescript-vue-plugin"
+  ],
+  "unwantedRecommendations": [
+    // 禁用 Vetur（Vue 2 扩展），避免与 Volar 冲突
+    "octref.vetur"
+  ]
+}

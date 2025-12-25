@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "npm",
+      "script": "dev",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": false,
+        "clear": true
+      },
+      "problemMatcher": [],
+      "isBackground": true,
+      "runOptions": {
+        "runOn": "default"
+      }
+    },
+    {
+      "label": "build",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": true
+      },
+      "problemMatcher": [
+        "$tsc"
+      ]
+    },
+    {
+      "label": "type-check",
+      "type": "npm",
+      "script": "type-check",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": true
+      },
+      "problemMatcher": [
+        "$tsc"
+      ]
+    },
+    {
+      "label": "preview",
+      "type": "npm",
+      "script": "preview",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": false,
+        "clear": true
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    }
+  ]
+}
