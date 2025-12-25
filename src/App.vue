@@ -26,7 +26,6 @@
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import type { RouteRecordNormalized } from "vue-router";
-import type { RouteMeta } from "@/router/index";
 
 const route = useRoute();
 const router = useRouter();
@@ -37,7 +36,7 @@ const activeIndex = computed<string>(() => route.path);
 // 从路由配置中获取需要显示在菜单中的路由
 const menuRoutes = computed<RouteRecordNormalized[]>(() => {
   return router.getRoutes().filter((r) => {
-    const meta = r.meta as RouteMeta;
+    const meta = r.meta;
     return meta?.menu !== false && r.path !== "*";
   });
 });

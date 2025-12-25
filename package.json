@@ -5,7 +5,8 @@
   "description": "Vue3全家桶项目：Vue3 + Pinia + Vue Router + Element Plus",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
