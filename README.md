@@ -38,6 +38,28 @@ function extractEnvPrefix() {
 }
 ```
 
+## 可扩展的自定义指令
+
+1. 防抖
+
+```js
+ // 延迟执行
+ <el-button
+   type="success"
+   :icon="Plus"
+   v-debounce:1000="() => {}"
+   circle
+ />
+
+ // 立即执行
+ <el-button
+   type="warning"
+   :icon="Plus"
+   v-debounce:1000.immediate="() => {}"
+   circle
+ />
+```
+
 ---
 
 ## Vue3

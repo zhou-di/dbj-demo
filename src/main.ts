@@ -8,6 +8,8 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 // 引入全局样式
 import '@/styles/index.scss'
 
+import vDebounce from '@/directives/vDebounce'
+
 import App from './App.vue'
 import router from './router'
 
@@ -24,6 +26,8 @@ app.use(router)
 app.use(ElementPlus, {
   locale: zhCn,
 })
+
+app.directive('debounce', vDebounce)
 
 app.mount('#app')
 
