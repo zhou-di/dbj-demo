@@ -2,17 +2,17 @@
   <el-container class="app-container">
     <el-header class="app-header">
       <el-menu
-        :default-active="activeIndex"
         class="app-menu"
         mode="horizontal"
+        :default-active="activeIndex"
         :router="true"
       >
         <el-menu-item
-          v-for="route in menuRoutes"
-          :key="route.path"
-          :index="route.path"
+          v-for="item in menuRoutes"
+          :key="item.path"
+          :index="item.path"
         >
-          {{ route.meta?.title || route.name }}
+          {{ item.meta?.title || item.name }}
         </el-menu-item>
       </el-menu>
     </el-header>
