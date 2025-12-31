@@ -1,7 +1,9 @@
 {
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // 禁用默认格式化程序
   "editor.formatOnSave": false,
   "eslint.format.enable": true,
+  // 保存时自动运行 ESLint 修复
   // "editor.codeActionsOnSave": {
   //   "source.fixAll.eslint": "explicit"
   // },

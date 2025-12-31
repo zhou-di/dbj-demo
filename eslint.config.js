@@ -23,17 +23,20 @@ export default [
         "error",
         {
           order: [
-            "DEFINITION",
-            "LIST_RENDERING",
-            "CONDITIONALS",
-            "RENDER_MODIFIERS",
-            "GLOBAL",
-            ["UNIQUE", "SLOT"],
-            "TWO_WAY_BINDING",
-            "OTHER_DIRECTIVES",
-            "OTHER_ATTR",
-            "EVENTS",
-            "CONTENT",
+            "DEFINITION",          // 1. 定义类: "is", "v-is"
+            "LIST_RENDERING",      // 2. 列表渲染: "v-for"
+            "CONDITIONALS",        // 3. 条件渲染: "v-if", "v-else-if", "v-else", "v-show", "v-cloak"
+            "RENDER_MODIFIERS",    // 4. 渲染修饰符: "v-once", "v-pre"
+            "GLOBAL",              // 5. 全局属性 (非Vue特有): "id"
+            "UNIQUE",              // 6. 唯一标识 (非Vue特有): "ref", "key"
+            "SLOT",                // 7. 插槽: "v-slot", "slot"
+            "TWO_WAY_BINDING",     // 8. 双向绑定: "v-model"
+            "ATTR_STATIC",         // 9. 普通静态属性 (非Vue特有): "class", "style", "src", "type", "alt" 等
+            "ATTR_DYNAMIC",        // 10. 动态绑定: "v-bind:prop", ":prop"
+            "ATTR_SHORTHAND_BOOL", // 11. 简写布尔属性: "disabled", "checked"
+            "OTHER_DIRECTIVES",    // 12. 其他指令: "v-custom-directive"
+            "EVENTS",              // 13. 事件: "@click", "v-on"
+            "CONTENT"              // 14. 内容指令: "v-text", "v-html"
           ],
           alphabetical: false,
         },

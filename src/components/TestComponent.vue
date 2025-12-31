@@ -11,6 +11,7 @@
       v-if="showButton"
       v-bind:title="buttonTitle"
       v-model="buttonValue"
+      ref="buttonRef"
     >
       Test Button
     </el-button>
@@ -23,9 +24,10 @@ import { ref } from "vue";
 const showButton = ref(true);
 const buttonTitle = ref("Test Button Title");
 const buttonValue = ref("");
+const buttonRef = ref();
 
 const handleClick = () => {
-  console.log("Button clicked");
+  console.log("Button clicked", buttonRef.value);
 };
 </script>
 
