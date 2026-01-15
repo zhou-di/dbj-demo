@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^20.19.27",
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^9.39.2",
