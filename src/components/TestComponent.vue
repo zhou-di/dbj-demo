@@ -19,16 +19,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const showButton = ref(true);
-const buttonTitle = ref("Test Button Title");
-const buttonValue = ref("");
-const buttonRef = ref();
+const showButton = ref(true)
+const buttonTitle = ref('Test Button Title')
+const buttonValue = ref('')
+const buttonRef = ref()
 
 const handleClick = () => {
-  console.log("Button clicked", buttonRef.value);
-};
+  console.log('Button clicked', buttonRef.value)
+}
 </script>
 
 <style scoped>
