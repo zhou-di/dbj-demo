@@ -4,12 +4,8 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
-
-// 引入全局样式
 import '@/styles/index.scss'
-
 import vDebounce from '@/directives/vDebounce'
-
 import App from './App.vue'
 import router from './router'
 
